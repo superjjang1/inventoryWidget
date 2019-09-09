@@ -5,13 +5,14 @@ function ChecklistItems(props){
     return (
         <div class>
             <div>
-                Search Bar
             </div>
-            <div className>
-                <span className='col s6'>Name</span>
-                <span className='col s6'>Price</span>
-                <br/>
-                <Goods/>
+            <div className='container'>
+                <div className='card green'>
+                    <div className='row'>
+                <div className='col s6 m6'>Name</div>
+                <div className='col s6 m6'>Price</div>
+                    </div>
+                </div>
                 <Goods/>
             </div>
         </div>
