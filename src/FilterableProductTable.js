@@ -5,7 +5,7 @@ import ProductTable from './ProductTable';
 class FiltereableProductTable extends Component{
     render(){
         return (
-            <div>
+            <div className='col-sm-12'>
                 <SearchBar />
                 <ProductTable />
             </div>
