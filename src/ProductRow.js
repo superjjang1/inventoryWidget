@@ -8,7 +8,7 @@ function ProductRow(props) {
         productClass= "text-danger"
         fontStyle={
             fontWeight: "bold",
-            border: "1px blue solid"
+            border: "2px red solid"
         }
     }
     return (
