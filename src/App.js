@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import Checklist from './Checklist';
+import FilterableProductTable from './FilterableProductTable';
+
 
 
 function App() {
   return (
     <div className="App">
-      <Checklist />
+      <FilterableProductTable />
     </div>
   );
 }
