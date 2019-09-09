@@ -8,10 +8,8 @@ console.log(productData);
 function ProductTable(props){
     const products = productData.data.map((product,i)=> {
         return (
-           
             <ProductRow key={i} product= {product}/>
-            
-    )
+        )
     });
     return(
         <div className='product-table red'>
