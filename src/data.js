@@ -38,6 +38,24 @@ export default {
 			inStock: false
 		},
 		{
+			category: 'Sporting Goods',	
+			price: '$699.99',
+			name: 'Jump Rope',
+			inStock: false
+		},
+		{
+			category: 'Electronics',	
+			price: '$699.99',
+			name: 'Tazer',
+			inStock: true
+		},
+		{
+			category: 'Life Skillz',	
+			price: '$699.99',
+			name: 'The circle of life',
+			inStock: false
+		},
+		{
 			category: 'Electronics',	
 			price: '$999.99',
 			name: 'Galaxy Note10',
