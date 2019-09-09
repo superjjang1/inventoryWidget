@@ -8,7 +8,7 @@ console.log(productData);
 
 function ProductTable(props){
     let tempProducts = {};
-    const products = productData.data.forEach((product,i)=> {
+    productData.data.forEach((product,i)=> {
         // run some quick code to see if this is a new category
         if(tempProducts[product.category] === undefined){
             tempProducts[product.category]= [];
@@ -24,10 +24,9 @@ function ProductTable(props){
     //we need 2 loops. outside loop, loops through categories.
     //i.e., sporting goods and electronics, will run as many times as their are categories
     for(let key in tempProducts){
-        console.log(key);
-        rows.push(<ProductCategoryRow header={key}/>)  //push rthe productCategoryRow onto rows.red//map through allitems on thistype (i.e. sportinggoods)
-        tempProducts[key].forEach((product)=>{
-            rows.push(<ProductRow product={product}/>) //push this element on the rows.
+        rows.push(<ProductCategoryRow key={key} header={key}/>)  //push rthe productCategoryRow onto rows.red//map through allitems on thistype (i.e. sportinggoods)
+        tempProducts[key].forEach((product,i)=>{
+            rows.push(<ProductRow key={key+i} product={product}/>) //push this element on the rows.
         })
     }
 
