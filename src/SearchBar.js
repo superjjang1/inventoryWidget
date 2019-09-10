@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
-function SearchBar(props){
+class SearchBar extends Component{
+    constructor(){
+        super();
+        this.state = {}
+    }
+    render(){
     return(
         <div className='search-bar blue'>
         <input
@@ -13,6 +18,7 @@ function SearchBar(props){
         
         </div>
     )
+}
 }
 
 
