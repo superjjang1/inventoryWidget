@@ -8,7 +8,7 @@ console.log(productData);
 
 function ProductTable(props){
     let tempProducts = {};
-    productData.data.forEach((product,i)=> {
+    productData.data.filter(item => item.name.toLowerCase().includes(props.search.toLowerCase())).forEach((product,i)=> {
         // run some quick code to see if this is a new category
         if(tempProducts[product.category] === undefined){
             tempProducts[product.category]= [];
@@ -19,7 +19,7 @@ function ProductTable(props){
             <ProductRow key={i} product= {product}/>
         )
     });
-    console.log(tempProducts);
+    // console.log(tempProducts);
     let rows = [];
     //we need 2 loops. outside loop, loops through categories.
     //i.e., sporting goods and electronics, will run as many times as their are categories
@@ -29,6 +29,7 @@ function ProductTable(props){
             rows.push(<ProductRow key={key+i} product={product}/>) //push this element on the rows.
         })
     }
+    console.log(props.search);
 
     return(
         <div className='product-table red'>
