@@ -2,27 +2,36 @@ import React, { Component } from 'react';
 import SearchBar from './SearchBar';
 import ProductTable from './ProductTable';
 
-class FiltereableProductTable extends Component{
-    constructor(){
+class FilterableProductTable extends Component {
+    constructor() {
         super();
-        this.state={
-            search: ""
+        this.state = {
+            search: '',
+            inStock: false
         }
     }
-    handleFilterChange=(value)=>{
+
+    handleFilterChange = (value) => {
         this.setState({
-            search:value
+            search: value
         })
     }
-    render(){
-        return (
-            <div className='col-sm-12'>
-                <SearchBar search={this.state.search} changeFromParent={this.handleFilterChange}/>
-                <ProductTable search={this.state.search} />
+
+    handleStockChange = (value) => {
+        this.setState({
+            inStock: value
+        })
+    }
+
+    render() {
+        return(
+            <div className='col-sm-12 '>
+                <SearchBar search={this.state.search} inStock={this.state.inStock} changeFromParent= {this.handleFilterChange} changeFromParentStock={this.handleStockChange} />
+                <ProductTable search={this.state.search} inStock={this.state.inStock} />
             </div>
         )
     }
+
 }
 
-
-export default FiltereableProductTable;
+export default FilterableProductTable;
